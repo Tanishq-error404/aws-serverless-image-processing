@@ -1,0 +1,21 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadUploadedImages",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": "arn:aws:s3:::project2-image-uploads-tanishq-84721/*"
+    },
+    {
+      "Sid": "WriteProcessedImages",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Resource": "arn:aws:s3:::project2-image-processed-tanishq-84721/*"
+    }
+  ]
+}
