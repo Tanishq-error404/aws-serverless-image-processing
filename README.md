@@ -4,27 +4,16 @@ An event-driven serverless image processing pipeline built using AWS. The system
 
 ## Architecture
 
-```text
-User
- │
- ▼
-Amazon S3
-Upload Bucket
- │
- │ ObjectCreated Event
- ▼
-Amazon SQS
-Processing Queue
- │
- │ Event Source Mapping
- ▼
-AWS Lambda
- │
- │ Pillow
- │
- ├──────────────► Processed S3 Bucket
- │
- └──────────────► DynamoDB
+```mermaid
+flowchart LR
+    U[User] --> S3A[Amazon S3<br/>Upload Bucket]
+    S3A -->|ObjectCreated Event| Q[Amazon SQS<br/>Processing Queue]
+    Q -->|Event Source Mapping| L[AWS Lambda<br/>Image Processor]
+    L --> P[Pillow<br/>Image Processing]
+    P --> S3B[Amazon S3<br/>Processed Bucket]
+    P --> D[Amazon DynamoDB<br/>Processing Metadata]
+    L --> C[Amazon CloudWatch<br/>Logs]
+```
 
 AWS Services Used
 Service	Purpose
