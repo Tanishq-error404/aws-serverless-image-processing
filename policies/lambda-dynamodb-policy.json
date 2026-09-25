@@ -7,7 +7,7 @@
       "Action": [
         "dynamodb:PutItem"
       ],
-      "Resource": "arn:aws:dynamodb:ap-south-1:253264393527:table/project2-image-processing"
+      "Resource": "arn:aws:dynamodb:ap-south-1:YOUR_ACCOUNT_ID:table/YOUR_TABLE_NAME"
     }
   ]
 }
