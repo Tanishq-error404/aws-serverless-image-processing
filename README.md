@@ -48,7 +48,24 @@ flowchart LR
 - Automated image resizing  
 - Metadata persistence with DynamoDB  
 - Monitoring through CloudWatch  
-- Secure IAM-based access control  
+- Secure IAM-based access control
+
+## Screenshots
+
+### S3 Upload
+![S3 Upload](screenshots/S3%20upload%20bucket.jpg.png)
+
+### Processed Image
+![Processed Image](screenshots/S3%20processed%20bucket.jpg.png)
+
+### Lambda CloudWatch Logs
+![Lambda CloudWatch Logs](screenshots/logs.jpg.png)
+
+### DynamoDB Processing Record
+![DynamoDB](screenshots/DynamoDB.jpg.png)
+
+### Lambda Pillow Layer
+![Lambda Pillow Layer](screenshots/Lambda%20Layers.jpg.png)
 
 ## Future Enhancements
 
