@@ -8,13 +8,13 @@
         "Service": "s3.amazonaws.com"
       },
       "Action": "sqs:SendMessage",
-      "Resource": "arn:aws:sqs:ap-south-1:253264393527:project2-image-processing-queue",
+      "Resource": "arn:aws:sqs:ap-south-1:YOUR_ACCOUNT_ID:YOUR_QUEUE_NAME",
       "Condition": {
         "ArnEquals": {
-          "aws:SourceArn": "arn:aws:s3:::project2-image-uploads-tanishq-84721"
+          "aws:SourceArn": "arn:aws:s3:::YOUR-UPLOAD-BUCKET"
         },
         "StringEquals": {
-          "aws:SourceAccount": "253264393527"
+         "aws:SourceAccount": "YOUR_ACCOUNT_ID"
         }
       }
     }
