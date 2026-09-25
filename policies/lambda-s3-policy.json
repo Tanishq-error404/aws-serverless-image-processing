@@ -7,7 +7,7 @@
       "Action": [
         "s3:GetObject"
       ],
-      "Resource": "arn:aws:s3:::project2-image-uploads-tanishq-84721/*"
+      "Resource": "arn:aws:s3:::YOUR-UPLOAD-BUCKET/*"
     },
     {
       "Sid": "WriteProcessedImages",
@@ -15,7 +15,7 @@
       "Action": [
         "s3:PutObject"
       ],
-      "Resource": "arn:aws:s3:::project2-image-processed-tanishq-84721/*"
+      "Resource": "arn:aws:s3:::YOUR-PROCESSED-BUCKET/*"
     }
   ]
 }
